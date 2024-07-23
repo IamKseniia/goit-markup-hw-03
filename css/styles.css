@@ -129,6 +129,9 @@ img {
   text-align: center;
   color: #fff;
   margin-bottom: 48px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 496px;
 }
 
 .hero-button {
@@ -139,8 +142,8 @@ img {
   color: #fff;
   background: #4d5ae5;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  display: flex;
-  align-items: flex-start;
+  display: block;
+  min-width: 169px;
   margin: 0 auto;
   border-radius: 4px;
   padding: 16px 32px;
@@ -157,9 +160,23 @@ img {
   padding-bottom: 120px;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .features-list {
   display: flex;
   justify-content: space-between;
+  gap: 24px;
 }
 
 .features-item {
@@ -199,6 +216,7 @@ img {
 .team-list {
   display: flex;
   justify-content: space-between;
+  gap: 24px;
 }
 
 .team-item {
@@ -212,6 +230,11 @@ img {
 .team-image {
 }
 
+.team-block {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
 .team-name {
   font-weight: 500;
   font-size: 20px;
@@ -219,7 +242,6 @@ img {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
-  padding-top: 32px;
   margin-bottom: 8px;
 }
 
@@ -227,7 +249,6 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-align: center;
-  padding-bottom: 32px;
 }
 
 .portfolio {
@@ -246,17 +267,10 @@ img {
 }
 
 .portfolio-list {
-}
-
-.portfolio-list .block-first {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 48px;
-}
-
-.portfolio-list .block-second {
-  display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 48px;
 }
 
 .portfolio-item {
@@ -264,9 +278,8 @@ img {
 }
 
 .portfoli-container-text {
-  border-bottom: 1px solid #e7e9fc;
-  border-left: 1px solid #e7e9fc;
-  border-right: 1px solid #e7e9fc;
+  border: 1px solid #e7e9fc;
+  border-top: none;
   padding: 32px 16px;
 }
 
@@ -276,6 +289,7 @@ img {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
 
 .portfolio-text {
@@ -285,17 +299,15 @@ img {
 
 .footer {
   background-color: #2e2f42;
-}
-
-.footer-container {
   padding-top: 100px;
   padding-bottom: 100px;
 }
 
+.footer-container {
+}
+
 .footer-logo {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  display: inline-block;
   margin-bottom: 16px;
 }
 
@@ -307,4 +319,5 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
+  max-width: 264px;
 }
